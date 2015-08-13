@@ -18,22 +18,24 @@ func autoClosePopBarView() {
     }
 }
 
+/* 弹出的方向 */
+enum popViewDirection: Int {
+    case popToLeft = 1;
+    case popToRight = 2;
+}
+
+/* 弹出的大小设定, 更具需要修改 */
+struct PopBarOptions {
+    static var popBarViewWidth: CGFloat = 100
+    static var popBarViewHeight: CGFloat = 30
+    static var popbarViewDistanceWithButton: CGFloat = 1
+    static var popDirection: popViewDirection = .popToLeft
+}
+
 class popBarViewButton: UIButton {
     
     /* 开启的弹出条按钮 */
     private var xpopBarView: popBarView?
-    
-    /* 弹出的方向 */
-    enum popViewDirection: Int {
-        case popToLeft = 1;
-        case popToRight = 2;
-    }
-    
-    /* 弹出的大小设定, 更具需要修改 */
-    let popBarViewWidth: CGFloat = 100
-    let popBarViewHeight: CGFloat = 30
-    let popbarViewDistanceWithButton: CGFloat = 1
-    let popDirection: popViewDirection = .popToLeft
     
     /* 计算弹出的Frame */
     private var popBarViewOriginalFrame: CGRect!
@@ -75,33 +77,38 @@ class popBarViewButton: UIButton {
         var popBarViewY: CGFloat = 0
         
         /* 计算弹出视图的位置 */
-        if buttonFrame.height > self.popBarViewHeight{
-           popBarViewY = buttonFrame.origin.y + ((buttonFrame.height - self.popBarViewHeight) / 2)
+        if buttonFrame.height > PopBarOptions.popBarViewHeight{
+           popBarViewY = buttonFrame.origin.y +
+                ((buttonFrame.height - PopBarOptions.popBarViewHeight) / 2)
         } else {
-            popBarViewY = buttonFrame.origin.y - ((self.popBarViewHeight - buttonFrame.height) / 2)
+            popBarViewY = buttonFrame.origin.y -
+                ((PopBarOptions.popBarViewHeight - buttonFrame.height) / 2)
         }
-        switch self.popDirection {
+        switch PopBarOptions.popDirection {
         case .popToLeft:
             popBarViewOriginalX =
-                buttonFrame.origin.x - popbarViewDistanceWithButton
+                buttonFrame.origin.x - PopBarOptions.popbarViewDistanceWithButton
             popBarViewX =
-                buttonFrame.origin.x - (popbarViewDistanceWithButton + self.popBarViewWidth)
+                buttonFrame.origin.x -
+                    (PopBarOptions.popbarViewDistanceWithButton + PopBarOptions.popBarViewWidth)
         case .popToRight:
             popBarViewOriginalX =
-                buttonFrame.origin.x + popbarViewDistanceWithButton
+                buttonFrame.origin.x + PopBarOptions.popbarViewDistanceWithButton
             popBarViewX =
-                buttonFrame.origin.x + (popbarViewDistanceWithButton + self.popBarViewWidth)
+                buttonFrame.origin.x +
+                    (PopBarOptions.popbarViewDistanceWithButton + PopBarOptions.popBarViewWidth)
             break
         }
         
         /* 初始化的位置 */
         self.popBarViewOriginalFrame =
             CGRect(x: popBarViewOriginalX, y: popBarViewY,
-                width: 0, height: popBarViewHeight)
+                width: 0, height: PopBarOptions.popBarViewHeight)
         /* 弹出后的位置 */
         self.popBarViewFrame =
             CGRect(x: popBarViewX, y: popBarViewY,
-                width: self.popBarViewWidth, height: self.popBarViewHeight)
+                width: PopBarOptions.popBarViewWidth,
+                height: PopBarOptions.popBarViewHeight)
         /* 默认初始化 */
         self.xpopBarView = popBarView(frame: self.popBarViewOriginalFrame)
         self.xpopBarView?.ActiveBtn = self
