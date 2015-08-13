@@ -8,7 +8,10 @@
 import UIKit
 
 class popBarView: UIView {
-    /* 展开后的大小 */
+    /* 激活按钮 */
+    internal var ActiveBtn: popBarViewButton?
+    
+    /* 大小 */
     private var viewFrameBeforePop: CGRect!
     private var viewFrameAfterPop: CGRect!
     

@@ -7,7 +7,21 @@
 
 import UIKit
 
+/* 用于外部关闭最后一个打开的 */
+var lastPopBarView: popBarView?
+/* 自动关闭弹出条菜单 */
+func autoClosePopBarView() {
+    if let _ = lastPopBarView {
+        if let _ = lastPopBarView?.ActiveBtn {
+            lastPopBarView?.ActiveBtn?.togglePopView((lastPopBarView?.ActiveBtn?.frame)!)
+        }
+    }
+}
+
 class popBarViewButton: UIButton {
+    
+    /* 开启的弹出条按钮 */
+    private var xpopBarView: popBarView?
     
     /* 弹出的方向 */
     enum popViewDirection: Int {
@@ -18,7 +32,7 @@ class popBarViewButton: UIButton {
     /* 弹出的大小设定, 更具需要修改 */
     let popBarViewWidth: CGFloat = 100
     let popBarViewHeight: CGFloat = 30
-    let popbarViewDistanceWithButton: CGFloat = 5
+    let popbarViewDistanceWithButton: CGFloat = 1
     let popDirection: popViewDirection = .popToLeft
     
     /* 计算弹出的Frame */
@@ -28,7 +42,6 @@ class popBarViewButton: UIButton {
     /* 判断 */
     private var popBarViewHasInit: Bool = false
     private var popBarViewHasShow: Bool = false
-    private var xpopBarView: popBarView?
     private var customPopBarView: Bool = false
     private var actionAfterPop: (() -> Void)!
     
@@ -91,7 +104,9 @@ class popBarViewButton: UIButton {
                 width: self.popBarViewWidth, height: self.popBarViewHeight)
         /* 默认初始化 */
         self.xpopBarView = popBarView(frame: self.popBarViewOriginalFrame)
+        self.xpopBarView?.ActiveBtn = self
         
+        /* 已初始化标记 */
         self.popBarViewHasInit = true
     }
     
@@ -101,6 +116,8 @@ class popBarViewButton: UIButton {
     
     private func showPopBarView() {
         self.popBarViewHasShow = true
+        
+        lastPopBarView = self.xpopBarView
         
         self.xpopBarView!.backgroundColor = UIColor.grayColor()
         self.superview?.addSubview(self.xpopBarView!)
@@ -140,7 +157,11 @@ class popBarViewButton: UIButton {
         
         if self.popBarViewHasShow {
             self.dismissPopBarView()
+            lastPopBarView = nil
         } else {
+            if let _ = lastPopBarView {
+                autoClosePopBarView()
+            }
             self.showPopBarView()
         }
     }
