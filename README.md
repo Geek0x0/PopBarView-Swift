@@ -7,5 +7,5 @@ The popup button on Swift 2.0, similar to WeChat's Timeline eject button<br>
 #如何使用
 1. 必须指定PopBarSimpleOptions或者PopBarOptions的参数，用于定义弹出的PopBar的大小<br>
 2. 可以直接指定StoryBoard的控件Class为PopBarButtonSimple或者PopBarButton<br>
-3. 可以使用对PopBarButtonSimple或者PopBar实例化创建PopBar
+3. 可以使用对PopBarButtonSimple或者PopBar实例化创建PopBar<br>
 更多请参照Demo
