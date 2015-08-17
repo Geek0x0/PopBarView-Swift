@@ -22,7 +22,7 @@ enum PopToDirection: Int {
 
 /* 弹出的大小设定, 更具需要修改 */
 struct PopBarOptions {
-    static var popbarNibName: String = "PopView"
+    static var popbarNibName: String = ""
     static var popBarWidth: CGFloat = 198
     static var popBarHeight: CGFloat = 30
     static var popbarDistance: CGFloat = 1
