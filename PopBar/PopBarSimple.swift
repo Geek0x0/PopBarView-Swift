@@ -7,9 +7,12 @@
 
 import UIKit
 
-class popBarView: UIView {
+class popViewBase: UIView {
     /* 激活按钮 */
-    internal var ActiveBtn: popBarViewButton?
+    internal var ActiveBtn: PopBarButtonSimple?
+}
+
+class PopBarViewSimple: popViewBase {
     
     /* 大小 */
     private var viewFrameBeforePop: CGRect!
@@ -28,33 +31,38 @@ class popBarView: UIView {
         /* 圆角边框 */
         self.layer.masksToBounds = true
         self.layer.cornerRadius = 5.0
-        
+    }
+    
+    /* 使用默认按钮的初始化方法 */
+    convenience init(frame: CGRect, useDefault: Bool) {
+        self.init(frame: frame)
         /* 默认仅仅添加两个按钮，赞和分享 */
         self.addDefaultButton()
     }
     
     /* 传入自定义的Buttons，仅仅处理添加 */
-    convenience init(frame: CGRect, afterPopFrame: CGRect, buttons: [UIButton]?) {
-        self.init(frame: frame)
-        self.viewFrameAfterPop = afterPopFrame
-        
-        self.removeDefaultButton()
-        
-        if let addButtons = buttons {
-            /* 计算每个Button的布局(平均分布) */
-            let buttonWidth: CGFloat = (afterPopFrame.width / CGFloat(addButtons.count))
-            let buttonHeight: CGFloat = afterPopFrame.height
-            /* 添加自定义的按钮 */
-            var buttonXOffset: CGFloat = 0
-            for button in addButtons {
-                button.frame = CGRect(x: buttonXOffset, y: 0,
-                    width: buttonWidth, height: buttonHeight)
-                self.addSubview(button)
-                buttonXOffset += buttonWidth
+    convenience init(frame: CGRect, afterPopFrame: CGRect,
+        buttons: [UIButton]?) {
+            self.init(frame: frame)
+            self.viewFrameAfterPop = afterPopFrame
+            
+            if let addButtons = buttons {
+                /* 计算每个Button的布局(平均分布) */
+                let buttonWidth: CGFloat =
+                (afterPopFrame.width / CGFloat(addButtons.count))
+                let buttonHeight: CGFloat = afterPopFrame.height
+                /* 添加自定义的按钮 */
+                var buttonXOffset: CGFloat = 0
+                for button in addButtons {
+                    button.frame = CGRect(x: buttonXOffset, y: 0,
+                        width: buttonWidth, height: buttonHeight)
+                    self.addSubview(button)
+                    buttonXOffset += buttonWidth
+                }
             }
-        }
     }
     
+    /* 添加默认的按钮 */
     private func addDefaultButton() {
         let defaultButtonAction: Selector = Selector("defaultBtnAction:")
         
@@ -74,6 +82,7 @@ class popBarView: UIView {
         self.addSubview(shareButton)
     }
     
+    /* 移除默认的按钮 */
     private func removeDefaultButton() {
         self.greatButton.removeFromSuperview()
         self.shareButton.removeFromSuperview()
@@ -82,6 +91,7 @@ class popBarView: UIView {
         self.shareButton = nil
     }
     
+    /* 公共方法设置默认按钮标题 */
     internal func setDefaultButtonSetTitle() {
         if let _ = self.greatButton {
             self.greatButton.setTitle("赞", forState: .Normal)
@@ -91,6 +101,7 @@ class popBarView: UIView {
         }
     }
     
+    /* 创建按钮 */
     private func createButton(frame: CGRect, btnAction: Selector) -> UIButton {
         let button: UIButton = UIButton(type: .Custom)
         button.frame = frame
@@ -108,6 +119,7 @@ class popBarView: UIView {
         case shareBtn = 1;
     }
     
+    /* 默认按钮激活事件 */
     func defaultBtnAction(sender: UIButton) {
         let btnType: defaultBtnType = defaultBtnType(rawValue: sender.tag)!
         switch btnType {

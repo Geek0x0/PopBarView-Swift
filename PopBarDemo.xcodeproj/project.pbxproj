@@ -8,24 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		782F14EF1B7B147B00B6D772 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782F14EE1B7B147B00B6D772 /* AppDelegate.swift */; };
-		782F14F11B7B147B00B6D772 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782F14F01B7B147B00B6D772 /* ViewController.swift */; };
+		782F14F11B7B147B00B6D772 /* DemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782F14F01B7B147B00B6D772 /* DemoView.swift */; };
 		782F14F41B7B147B00B6D772 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 782F14F21B7B147B00B6D772 /* Main.storyboard */; };
 		782F14F61B7B147B00B6D772 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 782F14F51B7B147B00B6D772 /* Assets.xcassets */; };
 		782F14F91B7B147B00B6D772 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 782F14F71B7B147B00B6D772 /* LaunchScreen.storyboard */; };
-		782F15031B7B458300B6D772 /* popBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782F15021B7B458300B6D772 /* popBarView.swift */; };
-		782F15051B7B45C700B6D772 /* popBarViewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782F15041B7B45C700B6D772 /* popBarViewButton.swift */; };
+		78394C741B7DD98B0047D1FF /* PopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78394C731B7DD98B0047D1FF /* PopBar.swift */; };
+		78AD73AD1B7D81C300391778 /* PopBarSimple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AD73AB1B7D81C300391778 /* PopBarSimple.swift */; };
+		78AD73AE1B7D81C300391778 /* PopBarSimpleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AD73AC1B7D81C300391778 /* PopBarSimpleButton.swift */; };
+		78AD73B41B7D840600391778 /* PopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78AD73B31B7D840600391778 /* PopView.xib */; };
+		78EA56FE1B8184F90015A971 /* popView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EA56FD1B8184F90015A971 /* popView.swift */; };
+		78EA57021B818C920015A971 /* PopBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EA57011B818C920015A971 /* PopBarButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		782F14EB1B7B147B00B6D772 /* PopViewWithButton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PopViewWithButton.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		782F14EB1B7B147B00B6D772 /* PopBarDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PopBarDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		782F14EE1B7B147B00B6D772 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		782F14F01B7B147B00B6D772 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		782F14F01B7B147B00B6D772 /* DemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoView.swift; sourceTree = "<group>"; };
 		782F14F31B7B147B00B6D772 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		782F14F51B7B147B00B6D772 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		782F14F81B7B147B00B6D772 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		782F14FA1B7B147B00B6D772 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		782F15021B7B458300B6D772 /* popBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = popBarView.swift; sourceTree = "<group>"; };
-		782F15041B7B45C700B6D772 /* popBarViewButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = popBarViewButton.swift; sourceTree = "<group>"; };
+		78394C731B7DD98B0047D1FF /* PopBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PopBar.swift; path = PopBar/PopBar.swift; sourceTree = SOURCE_ROOT; };
+		78AD73AB1B7D81C300391778 /* PopBarSimple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PopBarSimple.swift; path = PopBar/PopBarSimple.swift; sourceTree = SOURCE_ROOT; };
+		78AD73AC1B7D81C300391778 /* PopBarSimpleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PopBarSimpleButton.swift; path = PopBar/PopBarSimpleButton.swift; sourceTree = SOURCE_ROOT; };
+		78AD73B31B7D840600391778 /* PopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopView.xib; sourceTree = "<group>"; };
+		78EA56FD1B8184F90015A971 /* popView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = popView.swift; sourceTree = "<group>"; };
+		78EA57011B818C920015A971 /* PopBarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PopBarButton.swift; path = PopBar/PopBarButton.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,7 +50,7 @@
 		782F14E21B7B147B00B6D772 = {
 			isa = PBXGroup;
 			children = (
-				782F14ED1B7B147B00B6D772 /* PopViewWithButton */,
+				782F14ED1B7B147B00B6D772 /* PopViewDemo */,
 				782F14EC1B7B147B00B6D772 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,40 +58,46 @@
 		782F14EC1B7B147B00B6D772 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				782F14EB1B7B147B00B6D772 /* PopViewWithButton.app */,
+				782F14EB1B7B147B00B6D772 /* PopBarDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		782F14ED1B7B147B00B6D772 /* PopViewWithButton */ = {
+		782F14ED1B7B147B00B6D772 /* PopViewDemo */ = {
 			isa = PBXGroup;
 			children = (
-				782F15061B7B467800B6D772 /* popBar */,
 				782F14EE1B7B147B00B6D772 /* AppDelegate.swift */,
-				782F14F01B7B147B00B6D772 /* ViewController.swift */,
-				782F14F21B7B147B00B6D772 /* Main.storyboard */,
 				782F14F51B7B147B00B6D772 /* Assets.xcassets */,
-				782F14F71B7B147B00B6D772 /* LaunchScreen.storyboard */,
+				782F14F01B7B147B00B6D772 /* DemoView.swift */,
 				782F14FA1B7B147B00B6D772 /* Info.plist */,
+				782F14F71B7B147B00B6D772 /* LaunchScreen.storyboard */,
+				782F14F21B7B147B00B6D772 /* Main.storyboard */,
+				78AD73AA1B7D816900391778 /* PopBarButton */,
+				78AD73B31B7D840600391778 /* PopView.xib */,
+				78EA56FD1B8184F90015A971 /* popView.swift */,
 			);
-			path = PopViewWithButton;
+			name = PopViewDemo;
+			path = PopBarDemo;
 			sourceTree = "<group>";
 		};
-		782F15061B7B467800B6D772 /* popBar */ = {
+		78AD73AA1B7D816900391778 /* PopBarButton */ = {
 			isa = PBXGroup;
 			children = (
-				782F15021B7B458300B6D772 /* popBarView.swift */,
-				782F15041B7B45C700B6D772 /* popBarViewButton.swift */,
+				78AD73AB1B7D81C300391778 /* PopBarSimple.swift */,
+				78AD73AC1B7D81C300391778 /* PopBarSimpleButton.swift */,
+				78394C731B7DD98B0047D1FF /* PopBar.swift */,
+				78EA57011B818C920015A971 /* PopBarButton.swift */,
 			);
-			name = popBar;
+			name = PopBarButton;
+			path = ../PopBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		782F14EA1B7B147B00B6D772 /* PopViewWithButton */ = {
+		782F14EA1B7B147B00B6D772 /* PopBarDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 782F14FD1B7B147B00B6D772 /* Build configuration list for PBXNativeTarget "PopViewWithButton" */;
+			buildConfigurationList = 782F14FD1B7B147B00B6D772 /* Build configuration list for PBXNativeTarget "PopBarDemo" */;
 			buildPhases = (
 				782F14E71B7B147B00B6D772 /* Sources */,
 				782F14E81B7B147B00B6D772 /* Frameworks */,
@@ -93,9 +107,9 @@
 			);
 			dependencies = (
 			);
-			name = PopViewWithButton;
+			name = PopBarDemo;
 			productName = PopViewWithButton;
-			productReference = 782F14EB1B7B147B00B6D772 /* PopViewWithButton.app */;
+			productReference = 782F14EB1B7B147B00B6D772 /* PopBarDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -112,7 +126,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 782F14E61B7B147B00B6D772 /* Build configuration list for PBXProject "PopViewWithButton" */;
+			buildConfigurationList = 782F14E61B7B147B00B6D772 /* Build configuration list for PBXProject "PopBarDemo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -125,7 +139,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				782F14EA1B7B147B00B6D772 /* PopViewWithButton */,
+				782F14EA1B7B147B00B6D772 /* PopBarDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -137,6 +151,7 @@
 			files = (
 				782F14F91B7B147B00B6D772 /* LaunchScreen.storyboard in Resources */,
 				782F14F61B7B147B00B6D772 /* Assets.xcassets in Resources */,
+				78AD73B41B7D840600391778 /* PopView.xib in Resources */,
 				782F14F41B7B147B00B6D772 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -148,10 +163,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				782F14F11B7B147B00B6D772 /* ViewController.swift in Sources */,
-				782F15051B7B45C700B6D772 /* popBarViewButton.swift in Sources */,
-				782F15031B7B458300B6D772 /* popBarView.swift in Sources */,
+				78AD73AE1B7D81C300391778 /* PopBarSimpleButton.swift in Sources */,
+				78394C741B7DD98B0047D1FF /* PopBar.swift in Sources */,
+				78EA56FE1B8184F90015A971 /* popView.swift in Sources */,
+				78AD73AD1B7D81C300391778 /* PopBarSimple.swift in Sources */,
+				782F14F11B7B147B00B6D772 /* DemoView.swift in Sources */,
 				782F14EF1B7B147B00B6D772 /* AppDelegate.swift in Sources */,
+				78EA57021B818C920015A971 /* PopBarButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,11 +280,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = PopViewWithButton/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/PopBarDemo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.msy.PopViewWithButton;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.msy.PopViewDemo;
+				PRODUCT_NAME = PopBarDemo;
 			};
 			name = Debug;
 		};
@@ -274,18 +292,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = PopViewWithButton/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/PopBarDemo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.msy.PopViewWithButton;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.msy.PopViewDemo;
+				PRODUCT_NAME = PopBarDemo;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		782F14E61B7B147B00B6D772 /* Build configuration list for PBXProject "PopViewWithButton" */ = {
+		782F14E61B7B147B00B6D772 /* Build configuration list for PBXProject "PopBarDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				782F14FB1B7B147B00B6D772 /* Debug */,
@@ -294,13 +312,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		782F14FD1B7B147B00B6D772 /* Build configuration list for PBXNativeTarget "PopViewWithButton" */ = {
+		782F14FD1B7B147B00B6D772 /* Build configuration list for PBXNativeTarget "PopBarDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				782F14FE1B7B147B00B6D772 /* Debug */,
 				782F14FF1B7B147B00B6D772 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

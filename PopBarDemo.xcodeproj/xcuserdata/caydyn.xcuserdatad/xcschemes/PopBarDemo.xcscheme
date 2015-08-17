@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "782F14EA1B7B147B00B6D772"
-               BuildableName = "PopViewWithButton.app"
-               BlueprintName = "PopViewWithButton"
-               ReferencedContainer = "container:PopViewWithButton.xcodeproj">
+               BuildableName = "PopBarDemo.app"
+               BlueprintName = "PopBarDemo"
+               ReferencedContainer = "container:PopBarDemo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "782F14EA1B7B147B00B6D772"
-            BuildableName = "PopViewWithButton.app"
-            BlueprintName = "PopViewWithButton"
-            ReferencedContainer = "container:PopViewWithButton.xcodeproj">
+            BuildableName = "PopBarDemo.app"
+            BlueprintName = "PopBarDemo"
+            ReferencedContainer = "container:PopBarDemo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "782F14EA1B7B147B00B6D772"
-            BuildableName = "PopViewWithButton.app"
-            BlueprintName = "PopViewWithButton"
-            ReferencedContainer = "container:PopViewWithButton.xcodeproj">
+            BuildableName = "PopBarDemo.app"
+            BlueprintName = "PopBarDemo"
+            ReferencedContainer = "container:PopBarDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "782F14EA1B7B147B00B6D772"
-            BuildableName = "PopViewWithButton.app"
-            BlueprintName = "PopViewWithButton"
-            ReferencedContainer = "container:PopViewWithButton.xcodeproj">
+            BuildableName = "PopBarDemo.app"
+            BlueprintName = "PopBarDemo"
+            ReferencedContainer = "container:PopBarDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
