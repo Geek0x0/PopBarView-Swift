@@ -11,6 +11,7 @@ class PopBarButton: UIButton {
     
     private var popBar: PopBar?
     private var addPopBar: Bool = false
+    var popBarView: AnyObject?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -26,6 +27,7 @@ class PopBarButton: UIButton {
         let popBarFrame: CGRect = CGRectMake(0, 0,
             PopBarOptions.popBarWidth, PopBarOptions.popBarHeight)
         self.popBar = PopBar(frame: popBarFrame)
+        self.popBarView = self.popBar?.nibView
     }
     
     internal func togglePopBar() {

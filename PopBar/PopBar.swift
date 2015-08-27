@@ -26,6 +26,8 @@ struct PopBarOptions {
     static var popBarWidth: CGFloat = 198
     static var popBarHeight: CGFloat = 30
     static var popbarDistance: CGFloat = 1
+    static var popBarBGColor: UIColor =
+        UIColor(red: 76/255, green: 81/255, blue: 84/255, alpha: 1)
     static var popToDirection: PopToDirection = .popToLeft
 }
 
@@ -36,7 +38,7 @@ class PopBar: UIView {
     private var initCalculate: Bool = false
     
     /* 参数 */
-    private var nibView: UIView?
+    var nibView: UIView?
     private var collapseFrame: CGRect?      //缩小
     private var expansionFrame: CGRect?     //展开
     
@@ -53,8 +55,7 @@ class PopBar: UIView {
                 width: 0, height: frame.height)
         /* 默认未展开, X/Y均为0 */
         self.frame = self.collapseFrame!
-        self.backgroundColor =
-            UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
+        self.backgroundColor = PopBarOptions.popBarBGColor
         self.initView()
         /* 默认隐藏 */
         self.hidden = true
