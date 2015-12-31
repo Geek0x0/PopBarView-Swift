@@ -9,3 +9,5 @@ The popup button on Swift 2.0, similar to WeChat's Timeline eject button<br>
 2. 可以直接指定StoryBoard的控件Class为PopBarButtonSimple或者PopBarButton<br>
 3. 可以使用对PopBarButtonSimple或者PopBar实例化创建PopBar<br>
 更多请参照Demo
+<br>
+[![ghit.me](https://ghit.me/badge.svg?repo=caydyn-skd/PopBarView-Swift)](https://ghit.me/repo/caydyn-skd/PopBarView-Swift)
