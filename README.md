@@ -1,6 +1,9 @@
 # PopBarView-Swift
 [![ghit.me](https://ghit.me/badge.svg?repo=caydyn-skd/PopBarView-Swift)](https://ghit.me/repo/caydyn-skd/PopBarView-Swift)
-
+[![Language](http://img.shields.io/badge/language-swift-orange.svg?style=flat)](https://developer.apple.com/swift)
+[![Platform](https://img.shields.io/badge/platform-ios-lightgrey.svg?style=flat)](https://developer.apple.com/resources/)
+[![Issues](https://img.shields.io/github/issues/caydyn-skd/PopBarView-Swift.svg?style=flat)](https://github.com/caydyn-skd/PopBarView-Swift/issues)
+           
 基于Swift 2.0的弹出层按钮，类似于微信朋友圈的弹出按钮<br>
 The popup button on Swift 2.0, similar to WeChat's Timeline eject button<br>
 实际效果如下图(Renderings):<br>
